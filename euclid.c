@@ -12,7 +12,7 @@ int gcd(int u, int v)
   return v;
 }
 
-main()
+int main()
 {
   int x, y;
   while(printf("Input numerator and denomenator:\n"),

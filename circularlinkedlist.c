@@ -4,7 +4,7 @@
 struct node
 {int key; struct node *next;};
 
-main()
+int main()
 {
     int i, N, M;
 

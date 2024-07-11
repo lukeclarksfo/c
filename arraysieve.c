@@ -2,7 +2,7 @@
 
 #define N 1000
 
-main ()
+int main ()
 {
     int i, j, a[N+1];
     for (a[1] = 0, i = 2; i <= N; i++) a[i] = 1;
@@ -13,4 +13,5 @@ main ()
     for (i = 1; i <= N; i++)
         if (a[i]) printf("%4d",i);
     printf("\n");
+
 }

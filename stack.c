@@ -30,7 +30,7 @@ int pop()
 int stackempty()
 { return head->next == z;}
 
-main()
+int main()
 {
     stackinit();
 
