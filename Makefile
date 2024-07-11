@@ -6,8 +6,11 @@ build:
 	clang -o obj/linkedlistbyarrays linkedlistbyarrays.c
 	clang -o obj/print print.c
 	clang -o obj/stack stack.c
+	clang -o obj/stackpostfix stackpostfix.c
 
 clean:
-	rm -f obj/*
-	rm -rf *.dSYM/ arraysieve circularlinkedlist \
-	euclid linkedlist linkedlistbyarrays print stack
+	rm -rf obj/* \
+	*.dSYM/ \
+	arraysieve circularlinkedlist \
+	euclid linkedlist linkedlistbyarrays print stack \
+	stackpostfix
