@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "include/stackbyarray.c"
+#include "include/queue.c"
 
 int main ()
 {
