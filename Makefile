@@ -1,6 +1,6 @@
 CLANG=clang
 
-build: $(SRC)
+build:
 	${CLANG} -o obj/arraysieve arraysieve.c
 	${CLANG} -o obj/circularlinkedlist circularlinkedlist.c
 	${CLANG} -o obj/euclid euclid.c
