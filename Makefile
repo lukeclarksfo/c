@@ -1,6 +1,6 @@
 CLANG=clang
 
-build:
+build: $(SRC)
 	${CLANG} -o obj/arraysieve arraysieve.c
 	${CLANG} -o obj/circularlinkedlist circularlinkedlist.c
 	${CLANG} -o obj/euclid euclid.c
@@ -11,9 +11,9 @@ build:
 	${CLANG} -o obj/stackpostfix stackpostfix.c
 	${CLANG} -o obj/stackpostfixeval stackpostfixeval.c
 
+# Not all c files listed for build step
+
 clean:
 	rm -rf obj/* \
 	*.dSYM/ \
-	arraysieve circularlinkedlist \
-	euclid linkedlist linkedlistbyarrays print stack \
-	stackpostfix stackpostfixeval
+	$$(basename -s .c *.c)
