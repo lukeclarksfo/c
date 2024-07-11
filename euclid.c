@@ -15,7 +15,8 @@ int gcd(int u, int v)
 main()
 {
   int x, y;
-  while(scanf("%d %d", &x, &y) != EOF)
+  while(printf("Input numerator and denomenator:\n"),
+  scanf("%d %d", &x, &y) != EOF)
     if(x>0 && y>0)
       printf("%d %d %d\n", x, y, gcd(x,y));
 }
