@@ -6,14 +6,14 @@ static struct node
 
 static struct node *head, *z, *t;
 
-stackinit()
+void stackinit()
 {
     head = (struct node *) malloc(sizeof *head);
     z = (struct node *) malloc(sizeof *z);
     head->next = z; head->key=0;
     z->next = z;
 }
-push(int v)
+void push(int v)
 {
     t = (struct node *) malloc(sizeof *t);
     t->key = v; t->next = head->next;
@@ -33,7 +33,7 @@ int stackempty()
 main()
 {
     stackinit();
-    
+
     push(5);
     push(9);
     push(8);
