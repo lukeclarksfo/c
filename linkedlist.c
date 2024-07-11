@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 struct node
@@ -25,5 +26,5 @@ struct node *insertafter(int v, struct node *t)
 
 main()
 {
-    
+
 }
