@@ -1,9 +1,52 @@
 <!doctype html>
-
+<html>
+<head>
+<style>
+body
+{
+    margin: 0;
+    font-family:sans-serif;
+}
+header
+{
+    background: rgb(4 60 129);
+    color: white;
+    display: flex;
+}
+header div, header p
+{
+    padding: 20px;
+}
+header:nth-of-type(2)
+{
+    flex-flow: column;
+}
+header p, header h2
+{
+    padding: 10px 100px;
+}
+header h2
+{
+    font-weight: 550;
+}
+a 
+{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover
+{
+  text-decoration: underline;
+}
+</style>
 <style>
 body
 {
     font-family: sans-serif;
+}
+main
+{
     margin: 100px 20%;
 }
 div
@@ -11,7 +54,19 @@ div
     padding: 10px;
 }
 </style>
+</head>
+<body>
+<header>
+    <div><a href="https://lukeclarksfo.github.io/">Luke Clark</a></div>
+    <div><a href="https://github.com/lukeclarksfo">GitHub Profile</a></div>
+    <div><a href="https://github.com/lukeclarksfo/c/">GitHub</a></div>
+</header>
+<header>
+    <h2>Algorithms and Data Structures in C</h2>
+    <p>This contains algorithms written in C. Check out the repository to download and compile the programs.</p>
+</header>
 
+<main>
 <h2>Algorithms and data structures in C</h2>
 
 <div>Check out Euclid's algorithm and others.</div>
@@ -19,3 +74,6 @@ div
 <div><a href="https://github.com/lukeclarksfo/c/">GitHub</a></div>
 
 <div>Clone git repository https://github.com/lukeclarksfo/c/</div>
+</main>
+</body>
+</html>
