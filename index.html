@@ -16,11 +16,84 @@
 </div>
 
 <main>
-<h2>Algorithms and data structures in C</h2>
+<h2>Algorithms and Data Structures in C</h2>
 
-<div>Check out Euclid's algorithm and others.</div>
+<h2>Sorting</h2>
 
-<div>Clone git repository https://github.com/lukeclarksfo/c/</div>
+<h3>Selection Sort</h3>
+<p>One of the simplest sorting algorithms works as follows: first find
+    the smallest element in the array and exchange it with the element in 
+    the first position, then find the second smallest element and exchange
+    it with the element in the second position, and continue in this way
+    until the entire array is sorted. This method is called selection sort
+    because it works by repeatedly "selecting" the smallest remaining element.
+</p>
+
+<pre>
+    selection(int a[], int N)
+    {
+        int i, j, min, t;
+        for(i = 1; i < N; i++)
+        {
+            min = i;
+            for(j=i+1; i <= N; j++)
+                if(a[j] < a[min]) min = j;
+            t = a[min]; a[min] = a[i]; a[i] = t;
+        }
+    }
+</pre>
+<p>As the index i travels from left to right through the file, the elements 
+    to the left of the index are in their final position in the array (and will not
+    be touched again), so that the array is fully sorted when the index reaches the right end.
+</p>
+<p>This is among the simplest of sorting methods, and it will work very well for 
+    small files. The "inner loop" is the compraison a[j]&lt;[amin] (plus the 
+    code necessary to increment j and check that it does not exceed N), which
+    could hardly be simpler.
+</p>
+<p>Despite its evident "brute-force" approach, selection sort actually has a
+    quite important application: beacuse each item is actually moved at most once,
+    selection sort is the method of choice for storing files with very large records
+    and small keys.
+</p>
+
+<h3>Insertion Sort</h3>
+
+<p>An algorithm almost as simple as selection sort but perhaps more flexible is
+    insertion sort. The method proceeds as follows: consider the elements one at a time,
+    inserting each in its proper place among those already considered (keeping them sorted).
+    The element being considered is inserted merely by moving largeer elements one position
+    to the right and then inserting the element into the vacated position.
+</p>
+
+<pre>
+    insertion(int a[], int N)
+    {
+        int i, j, v;
+        for(i = 2; i <= N; i++)
+        {
+            v = a[i]; j = i;
+            while(a[j-1] > v)
+            {a[j]=a[j-1]; j--;}
+            a[j] = v;
+        }
+    }
+</pre>
+
+<p>As in selection sort, the elements to the left of the index i are in sorted
+    order during the sort, but they are not in their final position, as they may
+    have to be moved to make room for smaller elements encountered later. However, the
+    array is fully sorted when the index reaches the right end.
+</p>
+
+<p>There is one more important detail to consider: the procedure insertion doesn't work
+    for most inputs! The while will run past the left end of the array when v is
+    the smallest element in the array. To fix this, we put a "sentinel" key in
+    a[0], making it at least as small as the smallest element in the array. Sentinels are 
+    commonly used in situations like this to avoid including a test (in this case j>1)
+    that almost always suceeds within the inner loop.
+</p>
+
 </main>
 </body>
 </html>
