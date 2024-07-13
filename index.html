@@ -30,7 +30,7 @@
 </p>
 
 <pre>
-    void selection(int a[], int N)
+    void selectionsort(int a[], int N)
     {
         int i, j, min, t;
         for(i = 1; i < N; i++)
@@ -67,7 +67,7 @@
 </p>
 
 <pre>
-    void insertion(int a[], int N)
+    void insertionsort(int a[], int N)
     {
         int i, j, v;
         for(i = 2; i <= N; i++)
@@ -92,6 +92,33 @@
     a[0], making it at least as small as the smallest element in the array. Sentinels are 
     commonly used in situations like this to avoid including a test (in this case j>1)
     that almost always suceeds within the inner loop.
+</p>
+
+<h2>Bubble Sort</h2>
+
+<p>An elementary sorting method that is often taught in introductory classes is bubble sort:
+    keep passing through the file, exchanging adjacent elements, if necessary;
+    when no exchanges are required on some pass, the file is sorted.
+</p>
+
+<pre>
+    void bubblesort(int a[], int N)
+    {
+        int i, j t;
+        for(i = N; i >= 1; i--)
+            for(j=2; j <= i; j++)
+                if(a[j-1] > a[j])
+                {t = a[j-1]; a[j-1] = a[j]; a[j] = t;}
+    }
+</pre>
+
+<p>It takes a moment's reflection to convince oneself that this works at all.
+    To do so note that whenever the maximum element is encountered during
+    the first pass, it is exchanged with each of the elements to its right,
+    until it gets into position at the right end of the array. Then on the 
+    second pass, the second largest element will be put into position, etc.
+    Thus bubble sort operates as a type of selection sort, though it does
+    much more work to get each element into position.
 </p>
 
 </main>
