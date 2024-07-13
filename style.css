@@ -5,7 +5,7 @@ body
 }
 main
 {
-    margin: 100px 20%;
+    margin: 100px 27%;
 }
 div
 {
@@ -13,7 +13,16 @@ div
 }
 #cross-second-header
 {
-    background: url('img/hero.png') no-repeat 500px 50px;
+    background: url('img/hero.png') no-repeat 700px 0px;
     background-color: #053986;
     height: 250px;
+}
+pre
+{
+    background: #fafafa;
+    padding: 10px;
+}
+p
+{
+    line-height: 1.5;
 }
