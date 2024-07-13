@@ -11,3 +11,9 @@ div
 {
     padding: 10px;
 }
+#cross-second-header
+{
+    background: url('img/hero.png') no-repeat 500px 50px;
+    background-color: #053986;
+    height: 200px;
+}
